@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SynthaScript Landing Page
+
+A modern, conversion-optimized landing page for SynthaScript built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+- **Modern Design**: Dark theme with purple accent colors
+- **Conversion Optimized**: Multiple CTAs to book calls throughout the page
+- **Responsive**: Fully responsive design for all screen sizes
+- **Smooth Animations**: CSS transitions and hover effects
+- **SEO Ready**: Proper meta tags and semantic HTML
+
+## Sections
+
+- **Hero**: Bold headline with value proposition and CTAs
+- **Results**: Key metrics and client testimonials
+- **Brands**: Trusted partners and company stats
+- **FAQ**: Expandable accordion with common questions
+- **Book a Call**: Final conversion section
+- **Footer**: Navigation and contact information
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: Next.js 16
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Fonts**: Geist Sans & Geist Mono
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Brand Colors
 
-## Learn More
+- **Primary Purple**: #9333EA
+- **Primary Dark**: #7C3AED
+- **Primary Light**: #A855F7
+- **Background**: #000000 (Black)
+- **Text**: #FFFFFF (White)
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/
+│   ├── globals.css      # Global styles and CSS variables
+│   ├── layout.tsx       # Root layout with metadata
+│   └── page.tsx         # Main landing page
+├── components/
+│   ├── Navbar.tsx       # Navigation bar
+│   ├── Hero.tsx         # Hero section
+│   ├── Results.tsx      # Results/testimonials section
+│   ├── Brands.tsx       # Partners section
+│   ├── FAQ.tsx          # FAQ accordion
+│   ├── BookCall.tsx     # CTA section
+│   └── Footer.tsx       # Footer
+public/
+├── SmallLogo.png        # Favicon/icon
+└── TextBasedLogo.png    # Navbar logo
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customization
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Calendly Link**: Update the booking URL in `BookCall.tsx`
+2. **Contact Email**: Update email in `Footer.tsx`
+3. **Social Links**: Add your social media URLs in `Footer.tsx`
+4. **Testimonials**: Edit client quotes in `Results.tsx`
+5. **FAQ**: Modify questions and answers in `FAQ.tsx`
