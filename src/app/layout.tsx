@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   title: "SynthaScript | Transform Your Business with AI Automation",
   description: "SynthaScript helps businesses automate workflows, scale operations, and achieve measurable results with cutting-edge AI solutions.",
   icons: {
-    icon: "/SmallLogo.png",
-    apple: "/SmallLogo.png",
+    icon: "/SmallLogoForDarkBackground.png",
+    apple: "/SmallLogoForDarkBackground.png",
   },
 };
 
