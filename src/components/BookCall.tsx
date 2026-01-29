@@ -62,7 +62,7 @@ export default function BookCall() {
 
           {/* Trust note */}
           <p className="mt-6 text-gray-500 text-sm">
-            Join 50+ businesses that have transformed their operations with SynthaScript
+            No commitment required — just a conversation about your automation needs
           </p>
         </div>
       </div>

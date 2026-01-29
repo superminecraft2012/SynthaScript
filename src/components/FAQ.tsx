@@ -16,28 +16,12 @@ export default function FAQ() {
       answer: "We work with businesses of all sizes across various industries including SaaS, e-commerce, professional services, healthcare, finance, and more. Our solutions are tailored to each client's specific needs and scale. Whether you're a startup looking to automate your first processes or an enterprise seeking to optimize complex workflows, we have the expertise to help.",
     },
     {
-      question: "How long does implementation typically take?",
-      answer: "Most implementations are completed within 2-4 weeks, depending on the complexity of your workflows. Simple automations can be live within days, while more complex enterprise integrations may take 4-6 weeks. We work in agile sprints and deliver value incrementally, so you'll see results before the full implementation is complete.",
-    },
-    {
       question: "What's included in the free strategy call?",
       answer: "During the strategy call, we'll analyze your current workflows, identify automation opportunities, and provide a custom roadmap with projected ROI. You'll receive actionable insights regardless of whether we work together. There's no sales pressure—just honest consultation about how AI automation could benefit your business.",
     },
     {
-      question: "Do I need technical expertise to use your solutions?",
-      answer: "No technical expertise required. We handle all the technical implementation and provide intuitive interfaces for your team. We also include comprehensive training and ongoing support to ensure your team can confidently use and manage the automations. Our solutions are designed to be user-friendly while still being powerful.",
-    },
-    {
       question: "What's your pricing model?",
       answer: "We offer flexible pricing based on the scope and complexity of your automation needs. Our engagements typically start with a project-based implementation fee, followed by optional ongoing support and optimization packages. During your strategy call, we'll provide a custom quote based on your specific requirements and expected ROI.",
-    },
-    {
-      question: "How do you ensure data security and privacy?",
-      answer: "Security is our top priority. We use enterprise-grade encryption, comply with SOC 2, GDPR, and HIPAA requirements, and never store sensitive data unnecessarily. All integrations are built with security best practices, and we conduct regular security audits. We're happy to review our security protocols in detail during the strategy call.",
-    },
-    {
-      question: "What happens if something breaks or needs adjustments?",
-      answer: "We provide comprehensive support for all our implementations. This includes a warranty period where we fix any issues at no additional cost, plus ongoing monitoring and maintenance packages. Our team is responsive and typically resolves issues within hours, not days. We also build automations with redundancy and error handling to minimize disruptions.",
     },
     {
       question: "Can you integrate with our existing tools and systems?",
