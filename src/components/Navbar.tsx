@@ -14,7 +14,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/TextBasedLogo.png"
+              src="/DarkBackgroundLogo.png"
               alt="SynthaScript"
               width={180}
               height={40}

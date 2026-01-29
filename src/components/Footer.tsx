@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Logo and description */}
           <div className="md:col-span-2">
             <Image
-              src="/TextBasedLogo.png"
+              src="/DarkBackgroundLogo.png"
               alt="SynthaScript"
               width={180}
               height={40}
