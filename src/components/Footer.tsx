@@ -16,8 +16,7 @@ export default function Footer() {
               className="h-8 w-auto mb-4"
             />
             <p className="text-gray-400 text-sm max-w-sm leading-relaxed">
-              SynthaScript builds custom AI automation solutions that save you hundreds of hours, 
-              reduce costs, and scale your operations without scaling your team.
+              SynthaScript builds custom automation solutions that save you hours, cut costs, and scale your operations with authentic, personalized messages that keep customers engaged and coming back.
             </p>
           </div>
 
@@ -28,11 +27,6 @@ export default function Footer() {
               <li>
                 <Link href="#results" className="text-gray-400 hover:text-white text-sm transition-colors">
                   Results
-                </Link>
-              </li>
-              <li>
-                <Link href="#brands" className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Partners
                 </Link>
               </li>
               <li>

@@ -3,7 +3,7 @@ export default function Results() {
     {
       metric: "100+",
       label: "Hours Saved Monthly",
-      description: "Reclaim valuable time through intelligent AI automation workflows",
+      description: "Bi-weekly automated messages help you reclaim valuable time to focus on your business",
       icon: (
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -11,9 +11,9 @@ export default function Results() {
       ),
     },
     {
-      metric: "24/7",
-      label: "Automated Operations",
-      description: "Your workflows run around the clock without manual intervention",
+      metric: "Flexible",
+      label: "Pricing",
+      description: "Scaled pricing based on the amount of messages sent",
       icon: (
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />

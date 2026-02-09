@@ -20,14 +20,13 @@ export default function Hero() {
         {/* Main heading */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
           <span className="block text-white">Smarter Automation,</span>
-          <span className="block gradient-text glow-text">Scale Revenue,</span>
-          <span className="block text-white">Satisfied Clients</span>
+          <span className="block gradient-text glow-text">Satisfied Clients,</span>
+          <span className="block text-white">Scale Revenue</span>
         </h1>
 
         {/* Subheading */}
         <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10 leading-relaxed">
-          SynthaScript builds custom AI automation solutions that save you hundreds of hours, 
-          reduce costs, and scale your operations without scaling your team.
+          SynthaScript builds custom automation solutions that save you hours, cut costs, and scale your operations with authentic, personalized messages that keep customers engaged and coming back.
         </p>
 
         {/* CTA Buttons */}
@@ -36,7 +35,7 @@ export default function Hero() {
             href="#book-call"
             className="w-full sm:w-auto bg-[#9333EA] hover:bg-[#7C3AED] text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105 glow"
           >
-            Book Your Free Strategy Call
+            Contact Us
           </Link>
           <Link
             href="#results"

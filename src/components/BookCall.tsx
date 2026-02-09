@@ -1,4 +1,28 @@
+"use client";
+
+import { useState } from "react";
+
 export default function BookCall() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    company: "",
+    phoneNumber: "",
+    email: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent("New Contact from SynthaScript");
+    const body = encodeURIComponent(
+      `Full Name: ${formData.fullName}\nCompany: ${formData.company}\nPhone Number: ${formData.phoneNumber}\nEmail: ${formData.email}`
+    );
+    window.location.href = `mailto:cl17services@gmail.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <section id="book-call" className="py-24 bg-gradient-to-b from-black via-purple-950/20 to-black relative overflow-hidden">
       {/* Background decoration */}
@@ -8,62 +32,89 @@ export default function BookCall() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-b from-white/10 to-white/5 border border-white/20 rounded-3xl p-8 md:p-12 text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 mb-8">
-            <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse" />
-            <span className="text-green-300 text-sm font-medium">Limited spots available this month</span>
-          </div>
-
+        <div className="bg-gradient-to-b from-white/10 to-white/5 border border-white/20 rounded-3xl p-8 md:p-12">
           {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center">
             <span className="text-white">Ready to </span>
             <span className="gradient-text">Transform</span>
             <span className="text-white"> Your Business?</span>
           </h2>
 
-          {/* Description */}
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-            Book a free 30-minute strategy session with our automation experts. 
-            We&apos;ll analyze your current workflows and show you exactly how AI can save you time and money.
-          </p>
-
-          {/* What you'll get */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center sm:justify-start gap-3 text-gray-300">
-              <svg className="w-5 h-5 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="text-sm">Custom ROI analysis</span>
+          {/* Contact Form */}
+          <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-6">
+            <div>
+              <label htmlFor="fullName" className="block text-white font-medium mb-2">
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleChange}
+                required
+                className="w-full bg-white/5 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+                placeholder="Enter your full name"
+              />
             </div>
-            <div className="flex items-center justify-center sm:justify-start gap-3 text-gray-300">
-              <svg className="w-5 h-5 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="text-sm">Workflow assessment</span>
-            </div>
-            <div className="flex items-center justify-center sm:justify-start gap-3 text-gray-300">
-              <svg className="w-5 h-5 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="text-sm">No obligation</span>
-            </div>
-          </div>
 
-          {/* CTA Button */}
-          <a
-            href="https://calendly.com" // Replace with actual Calendly link
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-[#9333EA] hover:bg-[#7C3AED] text-white px-10 py-5 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105 glow"
-          >
-            Book Your Free Strategy Call
-          </a>
+            <div>
+              <label htmlFor="company" className="block text-white font-medium mb-2">
+                Company
+              </label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                value={formData.company}
+                onChange={handleChange}
+                required
+                className="w-full bg-white/5 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+                placeholder="Enter your company name"
+              />
+            </div>
 
-          {/* Trust note */}
-          <p className="mt-6 text-gray-500 text-sm">
-            No commitment required — just a conversation about your automation needs
-          </p>
+            <div>
+              <label htmlFor="phoneNumber" className="block text-white font-medium mb-2">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phoneNumber"
+                name="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+                required
+                className="w-full bg-white/5 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+                placeholder="Enter your phone number"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="email" className="block text-white font-medium mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full bg-white/5 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+                placeholder="Enter your email address"
+              />
+            </div>
+
+            <div className="pt-4 text-center">
+              <button
+                type="submit"
+                className="inline-block bg-[#9333EA] hover:bg-[#7C3AED] text-white px-10 py-5 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105 glow cursor-pointer"
+              >
+                Contact Us
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>

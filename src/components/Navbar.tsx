@@ -28,9 +28,6 @@ export default function Navbar() {
             <Link href="#results" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
               Results
             </Link>
-            <Link href="#brands" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
-              Partners
-            </Link>
             <Link href="#faq" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
               FAQ
             </Link>
@@ -72,13 +69,6 @@ export default function Navbar() {
                 className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
               >
                 Results
-              </Link>
-              <Link
-                href="#brands"
-                onClick={() => setIsOpen(false)}
-                className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
-              >
-                Partners
               </Link>
               <Link
                 href="#faq"
